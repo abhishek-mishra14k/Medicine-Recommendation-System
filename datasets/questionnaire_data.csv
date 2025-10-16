@@ -1,0 +1,61 @@
+Age,Gender,Symptoms,Symptom Duration (days),Previous Medicines,Taking_Medicine,Predicted Disease,Recommended Medicines
+25,Female,"fever|headache|fatigue",3,no,None,Viral Infection,Paracetamol 500mg|Rest Fluids
+45,Male,"cough|chest pain|shortness of breath",7,yes,Albuterol Inhaler,Asthma Exacerbation,Prednisone|Albuterol Inhaler|Doctor Consult
+65,Female,"dizziness|fatigue|body pain",14,yes,Lisinopril,Hypertension Fatigue,Monitor BP|Vitamin B12
+18,Male,"nausea|vomiting|stomach pain",1,no,None,Food Poisoning,ORS|Bland Diet
+38,Female,"rash|itching|redness",4,no,None,Contact Dermatitis,Hydrocortisone Cream|Cetirizine 10mg
+12,Male,"sore throat|fever|cough",2,no,Tylenol,Acute Pharyngitis,Amoxicillin (Rx)|Throat Lozenges
+55,Male,"headache|nausea|vomiting",1,yes,Ibuprofen,Migraine,Sumatriptan (Rx)|Dark Room Rest
+29,Female,"diarrhea|loss of appetite|stomach pain",2,no,None,Gastroenteritis,ORS|Loperamide
+70,Male,"body pain|fatigue",30,yes,Naproxen,Rheumatoid Arthritis,NSAID (Naproxen)|Physiotherapy
+20,Female,"cold|runny nose|headache",5,no,None,Common Cold,Decongestant Spray|Zinc Lozenges
+52,Male,"vomiting|diarrhea|fever",1,no,None,Norovirus Infection,ORS|Anti-Emetics
+30,Female,"fatigue|dizziness",60,no,None,Chronic Fatigue,Iron Supplements|B-Vitamin Complex
+42,Male,"itching|swelling|redness",1,no,None,Hives,Cetirizine 10mg|Cold Compress
+60,Female,"cough|sore throat",3,yes,Zantac,Mild Laryngitis,Dextromethorphan Syrup|Warm Fluids
+28,Male,"fever|body pain|headache",2,no,None,Viral Flu,Paracetamol 500mg|Fluids|Rest
+19,Female,"shortness of breath|chest pain",1,no,None,Anxiety Attack,Breathing Techniques|Consult Therapist
+58,Male,"nausea|loss of appetite",7,yes,Prilosec,Gastritis,Omeprazole 20mg|Diet Change
+48,Female,"dizziness|vomiting",1,no,None,Vertigo,Meclizine 25mg|Quiet Rest
+10,Male,"rash|fever",2,no,None,Chicken Pox,Calamine Lotion|Acyclovir (Rx)
+35,Male,"headache|fatigue",10,yes,Tylenol,Tension Headache,Ibuprofen 200mg|Stress Management
+40,Female,"fever|cough",3,no,None,Common Cold,Paracetamol 500mg|Cough Syrup
+55,Male,"fatigue|headache|dizziness",14,yes,Lipitor,Chronic Fatigue,Monitor BP|Vitamin B12
+22,Male,"vomiting|stomach pain",1,no,None,Food Poisoning,ORS|Bland Diet
+68,Female,"rash|itching",2,no,None,Contact Dermatitis,Hydrocortisone Cream|Avoid Irritant
+34,Male,"sore throat|fever",1,no,None,Strep Throat,Amoxicillin (Rx)|Throat Lozenges
+15,Female,"cold|headache",3,no,None,Common Cold,Decongestant Spray|Rest
+50,Male,"diarrhea|fever",1,no,None,Gastroenteritis,ORS|Loperamide
+7,Female,"body pain|headache",5,no,None,Viral Syndrome,Paracetamol (Pediatric)|Fluids
+45,Female,"loss of appetite|fatigue",30,yes,Zantac,Gastritis,Omeprazole 20mg|Diet Change
+60,Male,"cough|shortness of breath",1,yes,Singulair,Asthma Exacerbation,Prednisone|Inhaler|Doctor Consult
+28,Female,"itching|redness|swelling",1,no,None,Hives,Cetirizine 10mg|Cold Compress
+18,Male,"nausea|vomiting",1,no,None,Acute Nausea,Antiemetic Tablet|Ginger Tea
+30,Male,"fever|body pain",2,no,None,Viral Syndrome,Paracetamol (TID)|Fluids|Rest
+52,Female,"headache|fatigue",5,yes,Aspirin,Tension Headache,Stress Management|Hydration
+25,Male,"vomiting|diarrhea|fever",1,no,None,Norovirus Infection,ORS|Anti-Emetics
+38,Female,"dizziness|fatigue",60,yes,None,Anemia,Iron Supplements|B-Vitamin Complex
+65,Male,"rash|itching|redness",3,no,None,Contact Dermatitis,Hydrocortisone Cream|Cetirizine 10mg
+70,Female,"fever|sore throat",2,no,None,Strep Throat,Amoxicillin (Rx)|Throat Lozenges
+40,Male,"stomach pain|nausea",7,yes,Tums,Gastritis,Omeprazole 20mg|Diet Change
+55,Female,"cough|cold",4,no,None,Common Cold,Paracetamol|Decongestant Spray
+45,Male,"fever|fatigue|headache",5,no,None,Viral Infection,Paracetamol 500mg|Rest Fluids|Hydration
+58,Female,"cough|sore throat|fatigue",3,no,None,Common Cold,Decongestant Spray|Throat Lozenges
+10,Male,"diarrhea|vomiting",1,no,None,Gastroenteritis,ORS|Bland Diet (Rice/Toast)
+33,Female,"nausea|dizziness",2,yes,Tums,Mild Vertigo,Meclizine 25mg (PRN)|Quiet Rest
+70,Male,"body pain|headache|dizziness",10,yes,Aspirin,Tension Headache,Ibuprofen 400mg|Massage Therapy
+28,Female,"itching|rash|redness",2,no,None,Contact Dermatitis,Hydrocortisone Cream|Cetirizine 10mg
+16,Male,"fever|body pain",3,no,Tylenol,Viral Syndrome,Paracetamol (TID)|Fluids
+62,Male,"shortness of breath|cough",7,yes,Albuterol,Acute Bronchitis,Azithromycin (Rx)|Rest|Humidity
+5,Female,"vomiting|loss of appetite",1,no,None,Minor Stomach Upset,ORS (Pediatric)|Bland Diet
+21,Male,"headache|fatigue|cold",4,no,None,Common Cold,Paracetamol|Zinc Supplements
+75,Female,"fatigue|dizziness|nausea",30,yes,Diuretics,Anemia,Iron Supplements|B12 Shots|Doctor Consult
+50,Male,"stomach pain|diarrhea|fever",2,no,None,Bacterial Colitis,Ciprofloxacin (Rx)|ORS
+18,Female,"redness|swelling",1,no,None,Insect Bite Reaction,Calamine Lotion|Cold Compress
+38,Male,"chest pain|shortness of breath",1,no,None,Muscular Strain,Ibuprofen 400mg|Heat Pack
+8,Male,"sore throat|fever",2,no,None,Strep Throat,Amoxicillin (Rx)|Throat Lozenges
+48,Female,"headache|vomiting",1,yes,Imitrex,Migraine,Sumatriptan (Rx)|Dark Room Rest
+24,Male,"cough|cold|fatigue",5,no,None,Common Cold,Decongestant|Paracetamol
+66,Female,"dizziness|loss of appetite",14,no,None,Nutritional Deficiency,Vitamin D Supplement|Balanced Diet
+30,Male,"diarrhea|stomach pain",1,no,None,Food Poisoning,ORS|Loperamide
+55,Female,"fever|fatigue|body pain",7,yes,Aspirin,Viral Infection,Paracetamol (TID)|Fluids|Rest

@@ -1,0 +1,56 @@
+body { font-family: 'Arial', sans-serif; background: linear-gradient(to bottom, #44c6d7, #ffffff); min-height: 150vh; display: flex; flex-direction: column; }
+.container { max-width: 1200px; }
+header { transition: background 0.3s; height: 90px;  }
+header:hover { background: #0d6efd !important; } /* Interactive hover */
+.logo { animation: linear infinite; height:70px;width: auto; } /* Fun spin if wanted */
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+.btn-primary { transition: transform 0.2s; }
+.btn-primary:hover { transform: scale(1.05); box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+.card { border-radius: 15px; overflow: hidden; }
+.progress-bar { transition: width 0.5s ease-in-out; }
+.gsap-slide-in { opacity: 0; transform: translateY(50px); } /* GSAP will animate */
+.step { display: none; }
+.step.active { display: block; animation: slideIn 0.5s ease; }
+.footer {
+  animation: fadeInUp 3.2s ease-out 0s 1 normal forwards;
+}
+@keyframes slideIn { from { opacity: 0; transform: translateX(-20px); } to { opacity: 1; transform: translateX(0); } }
+/* Media queries for mobile */
+@media (max-width: 768px) { h1 { font-size: 2rem; } }
+
+.symptom-item {
+  transform: translateY(10px);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.symptom-item:hover {
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   DOCTOR ILLUSTRATION
+   ========================= */
+.doctor-illustration {
+    flex: 1;
+    max-width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.doctor-illustration img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.doctor-illustration img:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+

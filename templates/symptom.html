@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Medicine Recommendation System</title>
+
+    <!-- ✅ Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- ✅ Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <!-- ✅ Font Awesome (for icons like Instagram, Facebook, etc.) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- ✅ Your custom stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <!-- ✅ GSAP and your script -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+</head>
+
+
+<body>
+    <header class="fixed-top bg-primary text-white py-3 shadow">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="{{ url_for('home') }}"><img src="{{ url_for('static', filename='images/logo.png') }}?v=2"
+                    alt="Logo" class="logo" width="50" onerror="this.src='/static/images/fallback-logo.png'"></a>
+            <h1 class="fs-4 mb-0">Medicine Recommendation System</h1>
+            <nav>
+                <ul class="list-unstyled d-flex gap-3 mb-0">
+                    <li><a href="{{ url_for('home') }}" class="text-white">Home</a></li>
+                    <li><a href="{{ url_for('about') }}" class="text-white">About</a></li>
+                    <li><a href="{{ url_for('contact') }}" class="text-white">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container py-5 mt-5">
+
+        <img src="{{ url_for('static', filename='images/docter.avif') }}" alt="Doctor Image" class="fade-in"
+                style="display:block; margin:20px auto; width:300px; height:300px; border-radius:50%; object-fit:cover; background:transparent; box-shadow:0px 6px 15px rgba(0,0,0,0.4);">
+        <!-- Symptom Checker Form -->
+        <section id="symptom-checker" class="card shadow mb-5 animate__animated animate__fadeInUp">
+            <div class="card-body">
+                <h2 class="card-title fw-bold">Symptom Checker</h2>
+                <form id="symptom-form">
+                    <div class="mb-3">
+                        <label for="category" class="form-label">Choose Category</label>
+                        <select id="category" class="form-select gsap-input" onchange="showSymptoms()"
+                            aria-label="Symptom Category">
+                            <option value="">-- Select Category --</option>
+                           
+                        </select>
+                    </div>
+                    <div id="symptoms-list" class="d-flex flex-column gap-2 mb-3">
+                        <!-- Symptoms will be dynamically inserted here by script.js -->
+                    </div>
+                    <div class="d-flex gap-2">
+                        <button type="button" onclick="getSymptomRecommendation()"
+                            class="btn btn-primary animate__animated animate__pulse animate__infinite">Get
+                            Recommendation</button>
+                       
+                    </div>
+                </form>
+                <div id="symptom-result" class="mt-4 alert alert-info d-none animate__animated animate__zoomIn"></div>
+            </div>
+        </section>
+
+        <!-- Health Questionnaire Form -->
+        <section id="questionnaire" class="card shadow mb-5 animate__animated animate__fadeInUp delay-1s">
+            <div class="card-body">
+                <h2 class="card-title fw-bold">Health Questionnaire</h2>
+                <form id="health-form">
+                    <div class="progress mb-4" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+                        aria-valuemax="100">
+                        <div class="progress-bar" style="width: 0%"></div>
+                    </div>
+                    <div class="step active">
+                        <h3>Personal Information</h3>
+                        <div class="mb-3">
+                            <label for="age" class="form-label">Age <span
+                                    class="text-danger required-star">*</span></label>
+                            <input type="number" id="age" class="form-control gsap-input" min="1" max="120" required
+                                aria-label="Age">
+                        </div>
+                        <div class="mb-3">
+                            <label for="gender" class="form-label">Gender <span
+                                    class="text-danger required-star">*</span></label>
+                            <select id="gender" class="form-select gsap-input" required aria-label="Gender">
+                                <option value="">-- Select Gender --</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <button type="button" class="btn btn-primary gsap-slide-next">Next</button>
+                    </div>
+                    <div class="step">
+                        <h3>Health Details</h3>
+                        <div class="mb-3">
+                            <label for="symptoms" class="form-label">Symptoms <span
+                                    class="text-danger required-star">*</span></label>
+                            <textarea id="symptoms" class="form-control gsap-input" rows="4"
+                                placeholder="E.g., Fever, cough, headache..." required aria-label="Symptoms"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="duration" class="form-label">Symptom Duration</label>
+                            <input type="text" id="duration" class="form-control gsap-input"
+                                placeholder="E.g., 3 days, 2 weeks" aria-label="Duration">
+                        </div>
+                        <button type="button" class="btn btn-primary gsap-slide-next">Next</button>
+                    </div>
+                    <div class="step">
+                        <h3>Current Medications</h3>
+                        <div class="mb-3">
+                            <label for="previous_treatment" class="form-label">Taking Medicines? <span
+                                    class="text-danger required-star">*</span></label>
+                            <select id="previous_treatment" class="form-select gsap-input" required
+                                aria-label="Taking Medicines">
+                                <option value="">-- Select --</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="Taking_Medicine" class="form-label">List Medicines (if any)</label>
+                            <input type="text" id="Taking_Medicine" class="form-control gsap-input"
+                                placeholder="E.g., Paracetamol, Ibuprofen" aria-label="Medicines">
+                        </div>
+                        <button type="button" onclick="getQuestionnaireRecommendation()"
+                            class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+                <div id="questionnaire-result" class="mt-4 alert alert-info d-none animate__animated animate__zoomIn">
+                </div>
+            </div>
+        </section>
+
+        <!-- Image Upload Form -->
+        <section id="image-upload" class="card shadow animate__animated animate__fadeInUp delay-2s">
+            <div class="card-body">
+                <h2 class="card-title fw-bold">Upload Image for Analysis</h2>
+                <form id="image-form" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label for="image" class="btn btn-outline-primary">Choose Image</label>
+                        <input type="file" id="image" name="image" accept="image/*" hidden
+                            onchange="previewImage(event)" aria-label="Upload Image">
+                    </div>
+                    <div class="text-center">
+                        <img id="preview" src="{{ url_for('static', filename='images/docter 2.jpg') }}"
+                            alt="Image Preview" class="img-fluid rounded-circle gsap-zoom-in"
+                            style="width: 100px; height: 100px; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
+                    </div>
+
+                    <button type="button" onclick="uploadImageAndPredict('TONGUE')"
+                        class="btn btn-primary mt-3 animate__animated animate__pulse animate__infinite">Analyze
+                        Image</button>
+                        
+                </form>
+                <div id="image-analysis-result" class="mt-4 alert alert-info d-none animate__animated animate__zoomIn">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white py-4 mt-auto animate__animated animate__fadeInUp">
+        <div class="container">
+            <div class="row footer-content justify-content-between">
+                <div class="col-md-2 footer-col brand-col">
+                    <p class="footer-logo fs-5 fw-bold">Medicine Recommendation System</p>
+                    <img src="{{ url_for('static', filename='images/logo.png') }}?v=2" alt="Logo"
+                        class="img-fluid mb-3 gsap-zoom-in" style="width: 80px; height: auto;"
+                        onerror="this.src='/static/images/fallback-logo.png'">
+                </div>
+
+                <div class="col-md-2 footer-col">
+                    <h3 class="text-uppercase fs-6 fw-bold text-light">Mobile Site & Apps</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none"><i
+                                    class="fa-brands fa-globe me-2"></i>http://127.0.0.1:5000/#</a></li>
+                        <li><a href="#" class="text-white text-decoration-none"><i
+                                    class="fa-brands fa-android me-2"></i>Android</a></li>
+                        <li><a href="#" class="text-white text-decoration-none"><i
+                                    class="fa-brands fa-apple me-2"></i>iOS</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-2 footer-col">
+                    <h3 class="text-uppercase fs-6 fw-bold text-light">Follow Us On</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none"><i
+                                    class="fa-brands fa-square-facebook me-2"></i>Facebook</a></li>
+                        <li><a href="#" class="text-white text-decoration-none"><i
+                                    class="fa-brands fa-square-twitter me-2"></i>Twitter</a></li>
+                        <li><a href="#" class="text-white text-decoration-none"><i
+                                    class="fa-brands fa-square-instagram me-2"></i>Instagram</a></li>
+                        <li><a href="#" class="text-white text-decoration-none"><i
+                                    class="fa-brands fa-telegram me-2"></i>Telegram</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-2 footer-col">
+                    <h3 class="text-uppercase fs-6 fw-bold text-light">Company</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="{{ url_for('about') }}" class="text-white text-decoration-none">About Us</a></li>
+                        <li><a href="{{ url_for('contact') }}" class="text-white text-decoration-none">Contact Us</a>
+                        </li>
+                        <li><a href="#" class="text-white text-decoration-none">Careers</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Advertise</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Privacy Policy</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Terms of Use</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-2 footer-col">
+                    <h3 class="text-uppercase fs-6 fw-bold text-light">Personal Links</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none"><i
+                                    class="fa-brands fa-linkedin me-2"></i>abhishek-mishra-14k</a></li>
+                        <li><a href="#" class="text-white text-decoration-none"><i
+                                    class="fa-brands fa-github me-2"></i>abhsihek-mishra1</a></li>
+                        <li><a href="#" class="text-white text-decoration-none"><i
+                                    class="fa-brands fa-instagram me-2"></i>abhi_14k</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="bg-light my-3">
+
+            <div class="footer-bottom d-flex justify-content-between align-items-center flex-wrap gap-3">
+                <p class="copyright-text mb-0">&copy; 2025 Medicine Recommendation System - All rights reserved</p>
+                <a href="#top" class="move-to-top text-white btn btn-outline-light btn-sm gsap-slide-up">Move to top
+                    ↑</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
