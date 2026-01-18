@@ -10,12 +10,15 @@
 <div align="center">
 
   <h1>💊 Medicine Recommendation System</h1>
-  <h3><em>AI Powered • Accurate • Fast Medical Suggestions</em></h3>
+  <h3><em>AI Powered • Web Based • Accurate Medical Suggestions</em></h3>
 
   <p>
     <img src="https://img.shields.io/badge/Python-Backend-blue?style=for-the-badge&logo=python&logoColor=white" />
     <img src="https://img.shields.io/badge/Flask-API-black?style=for-the-badge&logo=flask&logoColor=white" />
     <img src="https://img.shields.io/badge/Machine%20Learning-Enabled-success?style=for-the-badge" />
+    <img src="https://img.shields.io/badge/HTML-Frontend-orange?style=for-the-badge&logo=html5&logoColor=white" />
+    <img src="https://img.shields.io/badge/CSS-Styling-blue?style=for-the-badge&logo=css3&logoColor=white" />
+    <img src="https://img.shields.io/badge/JavaScript-Logic-yellow?style=for-the-badge&logo=javascript&logoColor=black" />
   </p>
 
   <hr />
@@ -36,14 +39,15 @@
 <h2 id="overview">📌 Overview</h2>
 
 <p>
-  <strong>Medicine Recommendation System</strong> is a backend-based intelligent system
-  developed using Python and Machine Learning.
+  <strong>Medicine Recommendation System</strong> is a full-stack web application
+  developed using <b>HTML, CSS, JavaScript, Flask, Machine Learning, and Python</b>.
   It analyzes user symptoms and recommends suitable medicines
-  based on trained predictive models.
+  using a trained ML model.
 </p>
 
 <p>
-  The system ensures fast response, high accuracy, and scalable backend architecture.
+  The system provides a responsive web interface with a powerful backend
+  prediction engine.
 </p>
 
 <table border="1" cellpadding="8" cellspacing="0">
@@ -52,16 +56,16 @@
     <th align="left">Details</th>
   </tr>
   <tr>
-    <td>Language</td>
-    <td>Python</td>
+    <td>Frontend</td>
+    <td>HTML, CSS, JavaScript</td>
   </tr>
   <tr>
-    <td>Framework</td>
-    <td>Flask</td>
+    <td>Backend</td>
+    <td>Python, Flask</td>
   </tr>
   <tr>
-    <td>Model</td>
-    <td>Machine Learning (Classification)</td>
+    <td>ML Model</td>
+    <td>Classification Algorithm</td>
   </tr>
   <tr>
     <td>Dataset</td>
@@ -77,32 +81,32 @@
 
 <h2 id="features">🚀 Core Features</h2>
 
-<h3>🧾 Symptom Analysis</h3>
+<h3>🧾 Symptom Input (Frontend)</h3>
 <ul>
-  <li>Accepts multiple symptoms</li>
-  <li>Text preprocessing & cleaning</li>
-  <li>Feature extraction</li>
+  <li>Interactive web form</li>
+  <li>Client-side validation</li>
+  <li>Responsive UI design</li>
 </ul>
 
-<h3>🤖 ML Prediction</h3>
+<h3>🤖 ML Prediction Engine</h3>
 <ul>
-  <li>Disease prediction using trained model</li>
-  <li>High accuracy classification</li>
-  <li>Optimized prediction speed</li>
+  <li>Disease prediction</li>
+  <li>Trained ML model</li>
+  <li>Fast inference speed</li>
 </ul>
 
 <h3>💊 Medicine Recommendation</h3>
 <ul>
-  <li>Suggests suitable medicines</li>
-  <li>Displays dosage information</li>
-  <li>Side-effect awareness</li>
+  <li>Suggested medicines</li>
+  <li>Dosage guidance</li>
+  <li>Precaution tips</li>
 </ul>
 
-<h3>🌐 API Support</h3>
+<h3>🌐 Flask API</h3>
 <ul>
-  <li>Flask REST API</li>
-  <li>JSON response format</li>
-  <li>Easy frontend integration</li>
+  <li>RESTful endpoints</li>
+  <li>JSON response</li>
+  <li>Secure routing</li>
 </ul>
 
 <hr />
@@ -111,17 +115,17 @@
 
 <h3>📦 Modules</h3>
 <ul>
-  <li>Data Preprocessing Module</li>
-  <li>Model Training Module</li>
+  <li>Frontend (HTML, CSS, JS)</li>
+  <li>Flask Server</li>
+  <li>ML Model Loader</li>
   <li>Prediction Engine</li>
-  <li>Flask API Server</li>
 </ul>
 
 <h3>📊 ML Components</h3>
 <ul>
-  <li>Feature Vectorizer</li>
-  <li>Classification Model</li>
-  <li>Model Serialization (Pickle)</li>
+  <li>Feature Extraction</li>
+  <li>Classifier Model</li>
+  <li>Pickle Model Storage</li>
 </ul>
 
 <hr />
@@ -129,11 +133,11 @@
 <h2 id="workflow">🔄 Working Flow</h2>
 
 <ol>
-  <li>User enters symptoms</li>
-  <li>Backend preprocesses input</li>
+  <li>User enters symptoms on web UI</li>
+  <li>JavaScript sends request to Flask</li>
+  <li>Backend preprocesses data</li>
   <li>ML model predicts disease</li>
-  <li>System fetches medicine list</li>
-  <li>Results returned via API</li>
+  <li>System returns medicine list</li>
 </ol>
 
 <hr />
@@ -142,10 +146,10 @@
 
 <ol>
   <li>Clone repository</li>
-  <li>Install dependencies from requirements.txt</li>
+  <li>Install dependencies</li>
   <li>Run Flask server</li>
-  <li>Send symptoms via API / form</li>
-  <li>Get predictions</li>
+  <li>Open web interface</li>
+  <li>Test predictions</li>
 </ol>
 
 <pre>
@@ -157,12 +161,12 @@ python app.py
 
 <hr />
 
-<h2>🔒 Security & Ethics</h2>
+<h2>🔒 Ethics & Disclaimer</h2>
 <ul>
-  <li>No personal data stored</li>
-  <li>For educational use only</li>
-  <li>Not a replacement for doctors</li>
-  <li>Model trained on public dataset</li>
+  <li>Educational project</li>
+  <li>Not a substitute for doctors</li>
+  <li>No patient data stored</li>
+  <li>Model trained on sample dataset</li>
 </ul>
 
 <hr />
@@ -171,7 +175,7 @@ python app.py
 
 <p>
   <strong>Developed by:</strong> Abhishek Mishra<br/>
-  <strong>Domain:</strong> Python • Machine Learning • Backend Development
+  <strong>Domain:</strong> Python • Flask • Machine Learning • Full Stack Development
 </p>
 
 <hr />
