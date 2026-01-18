@@ -1,124 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Medicine Recommendation System</title>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
+
 <body>
 
-<div class="container">
+<div align="center">
 
-<h1>💊 Medicine Recommendation System</h1>
+  <h1>💊 Medicine Recommendation System</h1>
+  <h3><em>AI Powered • Accurate • Fast Medical Suggestions</em></h3>
+
+  <p>
+    <img src="https://img.shields.io/badge/Python-Backend-blue?style=for-the-badge&logo=python&logoColor=white" />
+    <img src="https://img.shields.io/badge/Flask-API-black?style=for-the-badge&logo=flask&logoColor=white" />
+    <img src="https://img.shields.io/badge/Machine%20Learning-Enabled-success?style=for-the-badge" />
+  </p>
+
+  <hr />
+
+  <p>
+    <a href="#overview">Overview</a> •
+    <a href="#features">Core Features</a> •
+    <a href="#architecture">System Architecture</a> •
+    <a href="#workflow">Working Flow</a> •
+    <a href="#deployment">Deployment</a> •
+    <a href="#author">Author</a>
+  </p>
+
+</div>
+
+<hr />
+
+<h2 id="overview">📌 Overview</h2>
 
 <p>
-A <b>Python-based backend system</b> that recommends medicines based on user symptoms.  
-This project uses machine learning and data processing techniques to provide accurate suggestions.
+  <strong>Medicine Recommendation System</strong> is a backend-based intelligent system
+  developed using Python and Machine Learning.
+  It analyzes user symptoms and recommends suitable medicines
+  based on trained predictive models.
 </p>
 
 <p>
-The system is designed with <b>clean backend architecture</b> and can be easily integrated with a frontend or API.
+  The system ensures fast response, high accuracy, and scalable backend architecture.
 </p>
 
-<hr>
+<table border="1" cellpadding="8" cellspacing="0">
+  <tr>
+    <th align="left">Specification</th>
+    <th align="left">Details</th>
+  </tr>
+  <tr>
+    <td>Language</td>
+    <td>Python</td>
+  </tr>
+  <tr>
+    <td>Framework</td>
+    <td>Flask</td>
+  </tr>
+  <tr>
+    <td>Model</td>
+    <td>Machine Learning (Classification)</td>
+  </tr>
+  <tr>
+    <td>Dataset</td>
+    <td>Symptom-Based Medical Dataset</td>
+  </tr>
+  <tr>
+    <td>Deployment</td>
+    <td>Local / Cloud Ready</td>
+  </tr>
+</table>
 
-<h2>📌 Project Overview</h2>
-<p>
-The Medicine Recommendation System analyzes user symptoms and predicts suitable medicines using a trained ML model.
-It helps users get quick and reliable medical suggestions.
-</p>
+<hr />
 
-<hr>
+<h2 id="features">🚀 Core Features</h2>
 
-<h2>✨ Key Features</h2>
+<h3>🧾 Symptom Analysis</h3>
 <ul>
-<li>Symptom-based medicine recommendation</li>
-<li>Machine learning model integration</li>
-<li>Flask backend API</li>
-<li>User-friendly response format</li>
-<li>Fast prediction results</li>
-<li>Scalable architecture</li>
+  <li>Accepts multiple symptoms</li>
+  <li>Text preprocessing & cleaning</li>
+  <li>Feature extraction</li>
 </ul>
 
-<hr>
-
-<h2>🛠 Tech Stack</h2>
+<h3>🤖 ML Prediction</h3>
 <ul>
-<li>Python</li>
-<li>Flask</li>
-<li>Pandas</li>
-<li>NumPy</li>
-<li>Scikit-learn</li>
-<li>HTML (Optional frontend)</li>
+  <li>Disease prediction using trained model</li>
+  <li>High accuracy classification</li>
+  <li>Optimized prediction speed</li>
 </ul>
 
-<hr>
+<h3>💊 Medicine Recommendation</h3>
+<ul>
+  <li>Suggests suitable medicines</li>
+  <li>Displays dosage information</li>
+  <li>Side-effect awareness</li>
+</ul>
 
-<h2>📂 Project Structure</h2>
+<h3>🌐 API Support</h3>
+<ul>
+  <li>Flask REST API</li>
+  <li>JSON response format</li>
+  <li>Easy frontend integration</li>
+</ul>
 
-<code>
-medicine-recommendation/<br>
-├── app.py<br>
-├── model.pkl<br>
-├── dataset.csv<br>
-├── templates/<br>
-├── static/<br>
-├── requirements.txt<br>
-└── README.md
-</code>
+<hr />
 
-<hr>
+<h2 id="architecture">⚙️ System Architecture</h2>
 
-<h2>⚙ Installation</h2>
+<h3>📦 Modules</h3>
+<ul>
+  <li>Data Preprocessing Module</li>
+  <li>Model Training Module</li>
+  <li>Prediction Engine</li>
+  <li>Flask API Server</li>
+</ul>
 
-<code>
-git clone https://github.com/your-username/Medicine-Recommendation-System.git<br>
-cd Medicine-Recommendation-System<br>
-pip install -r requirements.txt<br>
+<h3>📊 ML Components</h3>
+<ul>
+  <li>Feature Vectorizer</li>
+  <li>Classification Model</li>
+  <li>Model Serialization (Pickle)</li>
+</ul>
+
+<hr />
+
+<h2 id="workflow">🔄 Working Flow</h2>
+
+<ol>
+  <li>User enters symptoms</li>
+  <li>Backend preprocesses input</li>
+  <li>ML model predicts disease</li>
+  <li>System fetches medicine list</li>
+  <li>Results returned via API</li>
+</ol>
+
+<hr />
+
+<h2 id="deployment">🚀 Deployment & Usage</h2>
+
+<ol>
+  <li>Clone repository</li>
+  <li>Install dependencies from requirements.txt</li>
+  <li>Run Flask server</li>
+  <li>Send symptoms via API / form</li>
+  <li>Get predictions</li>
+</ol>
+
+<pre>
+git clone https://github.com/your-username/Medicine-Recommendation-System.git
+cd Medicine-Recommendation-System
+pip install -r requirements.txt
 python app.py
-</code>
+</pre>
 
-<hr>
+<hr />
 
-<h2>🔄 Working Flow</h2>
+<h2>🔒 Security & Ethics</h2>
 <ul>
-<li>User enters symptoms</li>
-<li>System processes input</li>
-<li>ML model predicts disease</li>
-<li>Recommended medicines displayed</li>
+  <li>No personal data stored</li>
+  <li>For educational use only</li>
+  <li>Not a replacement for doctors</li>
+  <li>Model trained on public dataset</li>
 </ul>
 
-<hr>
+<hr />
 
-<h2>📌 Sample Inputs</h2>
-<ul>
-<li>Fever, headache</li>
-<li>Cold, cough</li>
-<li>Stomach pain</li>
-</ul>
+<h2 id="author">📬 Author</h2>
 
-<hr>
+<p>
+  <strong>Developed by:</strong> Abhishek Mishra<br/>
+  <strong>Domain:</strong> Python • Machine Learning • Backend Development
+</p>
 
-<h2>🚀 Future Scope</h2>
-<ul>
-<li>Doctor consultation integration</li>
-<li>Mobile application</li>
-<li>AI chatbot</li>
-<li>Cloud deployment</li>
-</ul>
+<hr />
 
-<hr>
-
-<h2>👨‍💻 Author</h2>
-<p><b>Abhishek Mishra</b><br>Python Backend Developer</p>
-
-<hr>
-
-<div class="footer">
-⭐ If you like this project, please give it a star on GitHub!
-</div>
-
-</div>
+<p align="center">
+  <em>This system is for academic and learning purposes only.
+  Always consult a certified doctor for medical advice.</em>
+</p>
 
 </body>
 </html>
